@@ -1,0 +1,14 @@
+services:
+  html2htpy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8001:8000"
+    networks:
+      - htmlhtpy
+
+networks:
+  htmlhtpy:
+    name: htmlhtpy
